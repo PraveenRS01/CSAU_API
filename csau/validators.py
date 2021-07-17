@@ -32,7 +32,7 @@ departments = [
     "textile technology",
 ]
 
-tags = ["brown", "red", "grey", "purple","orange","green"]
+tags = ["brown", "red", "grey", "purple", "orange", "green"]
 
 
 def validate_email(email):
@@ -86,6 +86,11 @@ def validate_user(req):
 
     if len(req["email"]) == 0 or not validate_email(str(req["email"])):
         return False, {"message": "Invalid Email ID"}
+
+    u1 = User.query.filter_by(mobile_no=req["mobile_no"]).first()
+
+    if u1:
+        return False, {"message": "This Mobile no. is already registered with CSAU"}
 
     u1 = User.query.filter_by(email=str(req["email"])).first()
 

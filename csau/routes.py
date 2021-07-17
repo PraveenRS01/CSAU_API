@@ -62,11 +62,6 @@ def update_user(id):
     try:
         req = request.get_json()
 
-        condition, msg = validate_user(req)
-
-        if not condition:
-            return jsonify(msg)
-
         user = User.query.get(id)
 
         username = req["username"]
