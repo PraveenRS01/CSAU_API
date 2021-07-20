@@ -6,4 +6,4 @@ All the server and validation errrors are handled by the API
 
 API Link : https://csaurest.herokuapp.com/
 
-To add User : https://csaurest.herokuapp.com/user
+To display all Users : https://csaurest.herokuapp.com/user
