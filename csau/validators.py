@@ -20,6 +20,9 @@ departments = [
     "food technology",
     "geo-infomatics",
     "industrial bio-technology",
+    "industrial engineering",
+    "information technology",
+    "leather technology",
     "manufacturing engineering",
     "material science and engineering",
     "mechanical engineering",
@@ -33,6 +36,8 @@ departments = [
 ]
 
 tags = ["brown", "red", "grey", "purple", "orange", "green"]
+
+domains = ["web and app development", "marketing", "event management"]
 
 
 def validate_email(email):
@@ -80,6 +85,9 @@ def validate_user(req):
 
     if str(req["tag"]).lower() not in tags:
         return False, {"message": "Enter a valid tag colour"}
+
+    if str(req["domain"]).lower() not in domains:
+        return False, {"message": "Enter a valid domain name"}
 
     if len(str(req["mobile_no"])) != 10:
         return False, {"message": "Enter a valid mobile number"}
