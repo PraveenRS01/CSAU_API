@@ -6,7 +6,7 @@ from csau.validators import validate_user
 
 @app.route("/")
 def home():
-    return jsonify({"msg": "hellooo"})
+    return jsonify({"msg": "Hello!"})
 
 
 @app.route("/user", methods=["POST"])
