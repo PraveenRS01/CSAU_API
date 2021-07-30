@@ -37,7 +37,7 @@ departments = [
 
 tags = ["brown", "red", "grey", "purple", "orange", "green"]
 
-domains = ["web and app development", "marketing", "event management"]
+domains = ["web and app development", "marketing", "event management", "designing"]
 
 
 def validate_email(email):
